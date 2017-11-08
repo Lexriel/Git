@@ -1,0 +1,52 @@
+# 1/ Modifier le code source
+# 2/ Tester les modifications
+# 3/ Valider les modifications avec un commit
+# faire des commit régulièrement, mais pas des push
+# (pour annuler des commits, un push est irréversible)
+
+# ajouter fichiers à la liste d'un commit
+git add fichier1 fichier2
+
+# mettre à jour en commitant les fichiers
+git commit -m 'message'
+
+# télécharger les nouveautés à partir du serveur
+git pull
+
+# mettre en ligne les nouveautés sur le serveur
+git push -u origin # faire un pull avant push par sécurité
+
+# initialiser git
+git init
+
+# indique les changements réalisés et non mis à jour
+git status
+
+# voir les différences entre les différents commit
+git diff
+
+# raccourci
+* git add fichier1 fichier2
+  git commit
+* git status
+  git commit -a
+
+# faire un commit sur des fichiers en particulier
+git commit fichier1 fichier2
+
+# voir un commit dans les log
+git log
+git log -p # détail des lignes
+git log --stat # résumé court du commit
+
+# annuler le dernier commit, les fichiers ne sont pas remis à jour
+git reset HEAD # HEAD^ avant dernier, HEAD~2 avant-avant dernier
+
+# annuler le dernier commit et les changements
+git reset --hard HEAD
+
+# annuler modification d'un fichier avant commit
+git checkout
+
+# retirer fichier ajouté avec add
+git reset HEAD -- fichier
